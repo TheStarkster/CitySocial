@@ -1,0 +1,26 @@
+{
+  "name": "CitySocial",
+  "version": "1.0.0",
+  "description": "CitySocial",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sGurkaran/CitySocial.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sGurkaran/CitySocial/issues"
+  },
+  "homepage": "https://github.com/sGurkaran/CitySocial#readme",
+  "dependencies": {
+    "apollo-server": "^2.9.13",
+    "express": "^4.17.1",
+    "graphql": "^14.5.8",
+    "mongoose": "^5.8.1"
+  }
+}
