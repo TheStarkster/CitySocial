@@ -1,16 +1,20 @@
-const MongoClient = require('mongoose')
+const express = require('express')
 const { ApolloServer } = require('apollo-server')
 const typeDefs = require('./graphql/typedef')
 const resolvers = require('./graphql/resolvers/index')
+const db = require('./config/connection/db')
+
+const app = express()
 
 const server = new ApolloServer({
     typeDefs,
     resolvers
 })
 
-server.listen({port: 5000})
-// const app = express()
+app.use('/',require('./routes/paths'))
 
-MongoClient.connect('mongodb+srv://sGurkaran:qmxWco8121TB2wS0@gurkaranmaincluster-auih8.mongodb.net/CitySocial?retryWrites=true&w=majority', { useNewUrlParser: true,useUnifiedTopology: true })
-  .then(() => console.log('MongoDB Connected'))
-  .catch(err => console.log(err));
+server.listen({port: 5000})
+app.listen(2000)
+db.authenticate()
+  .then(() => console.log('[Database Connected]'))
+  .catch(err => console.log('Error: ' + err))

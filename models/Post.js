@@ -25,19 +25,19 @@
 
 // module.exports = model('Post', postSchema)
   
-const Sequelize = require('sequelize');
-const db = require('../config/db');
+// const Sequelize = require('sequelize');
+// const db = require('../config/connection/db');
 
-const Post = db.define('post', {
-    body: {
-        type: Sequelize.STRING
-    },
-    username: {
-        type: Sequelize.STRING
-    },
-    createdAt: {
-        type: Sequelize.STRING
-    },
-})
+// const Post = db.define('post', {
+//     body: {
+//         type: Sequelize.STRING
+//     },
+//     username: {
+//         type: Sequelize.STRING
+//     },
+//     createdAt: {
+//         type: Sequelize.STRING
+//     },
+// })
 
-module.exports = Post;
+// module.exports = Post;

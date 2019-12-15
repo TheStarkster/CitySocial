@@ -1,10 +1,17 @@
-const {model , Schema} = require('mongoose')
+const Sequelize = require('sequelize');
+const db = require('../config/connection/db');
 
-const userSchema = new Schema({
-    username: String,
-    password: String,
-    email: String,
-    createdAt: String
+const User = db.define('users', {
+    FName: {
+        type: Sequelize.STRING
+    },
+    LName: {
+        type: Sequelize.STRING
+    },
+    id: {
+        type: Sequelize.BIGINT,
+        primaryKey:true
+    },
 })
 
-module.exports = model('User', userSchema)
+module.exports = User
