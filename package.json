@@ -19,7 +19,7 @@
   "homepage": "https://github.com/sGurkaran/CitySocial#readme",
   "dependencies": {
     "apollo-server": "^2.9.13",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "graphql": "^14.5.8",
     "mongoose": "^5.8.1",
     "pg": "^7.14.0",
